@@ -1,7 +1,7 @@
 import logging
 import os
 import sys
-import datetime
+from datetime import datetime
 
 LOG_DIR = "logs"
 LOG_DIR_PATH = os.path.join(os.getcwd(),LOG_DIR)
