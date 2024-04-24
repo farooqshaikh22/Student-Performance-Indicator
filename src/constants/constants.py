@@ -22,3 +22,12 @@ RAW_DATA_DIR = 'raw_data'
 RAW_DATA = 'data.csv'
 TRAIN_DATA = 'train.csv'
 TEST_DATA = 'test.csv'
+
+## data transformation related variables
+
+DATA_TRANSFORMATION_DIR = 'data_transformation'
+PROCESSOR_DIR = 'processor'
+TRANSFORMATION_DIR = 'transformation'
+PROCESSOR_OBJ = 'processor.pkl'
+TRANSFORMED_TRAIN_DATA = 'train.csv'
+TRANSFORMED_TEST_DATA = 'test.csv'
