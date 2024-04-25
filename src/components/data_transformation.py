@@ -46,7 +46,7 @@ class DataTransformation:
             ## Numerical Pipeline            
             num_pipeline = Pipeline(steps=[
                 ("imputer",SimpleImputer(strategy='median')),
-                ("scaler",StandardScaler())
+                ("scaler",StandardScaler(with_mean=False))
             ])
             
             ## Categorical Pipeline
@@ -112,6 +112,8 @@ class DataTransformation:
             
             df_test.to_csv(self.data_transformation_config.transformed_test_data_file_path,
                            index=False,header=True)
+            
+            
             
             save_object(
                 file_path=self.data_transformation_config.processor_obj_file_path,
