@@ -31,3 +31,8 @@ TRANSFORMATION_DIR = 'transformation'
 PROCESSOR_OBJ = 'processor.pkl'
 TRANSFORMED_TRAIN_DATA = 'train.csv'
 TRANSFORMED_TEST_DATA = 'test.csv'
+
+## model trainer
+
+MODEL_TRAINER_DIR = 'model_trainer'
+MODEL_OBJ = 'model.pkl'
