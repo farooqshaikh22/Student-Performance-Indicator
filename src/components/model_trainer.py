@@ -52,7 +52,7 @@ class ModelTrainer:
             
             print(model_report)
             print("\n=======================================================================\n")
-            logging.info("Model Report : {model_report}")
+            logging.info(f"Model Report : {model_report}")
             
             ##Get best model score from dictionary
             best_model_score = max(sorted(model_report.values()))
