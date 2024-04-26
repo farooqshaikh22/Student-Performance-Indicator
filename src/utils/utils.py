@@ -39,8 +39,18 @@ def evaluate_model(X_train,y_train,X_test,y_test,models):
             report[list(models.keys())[i]] = test_r2_score
             
         return report
-                    
-        
+                           
     except Exception as e:
         logging.info('Exception occured during model training')
         raise CustomException(e,sys)
+    
+## function for loading the object
+def load_object(filepath):
+    try:
+        with open(filepath,'rb') as file_obj:
+            return pickle.load(file_obj)
+        
+    except Exception as e:
+        logging.info('Exception occured while loading model')
+        raise CustomException(e,sys)
+     
