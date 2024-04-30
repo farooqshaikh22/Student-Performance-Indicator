@@ -22,7 +22,7 @@ def home_page():
     return render_template('index.html')
 
 
-@app.route("/predict",mehods=['GET','POST'])
+@app.route("/predict",methods=['GET','POST'])
 def predict_datapoint():
     if request.method == 'GET':
         return render_template('form.html')
@@ -34,8 +34,8 @@ def predict_datapoint():
             parental_level_of_education = str(request.form.get('parental_level_of_education')),
             lunch = str(request.form.get('lunch')),
             test_preparation_course = str(request.form.get('test_preparation_course')),
-            reading_score = int(request.form.get('reading_score')),
-            writing_score = int(request.form.get('writing_score'))   
+            reading_score = float(request.form.get('reading_score')),
+            writing_score = float(request.form.get('writing_score'))   
         )
         
         final_new_data = data.get_data_as_data_frame()
@@ -44,7 +44,7 @@ def predict_datapoint():
         
         pred = predict_pipeline.predict(final_new_data)
         
-        return render_template('form.html',final_result = pred)
+        return render_template('form.html',final_result = pred[0])
     
 if __name__ == '__main__':
     app.run(debug=True)

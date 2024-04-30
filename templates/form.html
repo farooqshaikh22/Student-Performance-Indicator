@@ -3,7 +3,7 @@
 <style>
   .page {
     content: "";
-    background-image: url("https://wallpaperaccess.com/full/745763.jpg?w=1200");
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/388/024/original/illustration-of-university-graduates-vector.jpg?w=1200");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -53,123 +53,101 @@
       <div class="container">
 
 
-        
-        <div class="section">
-          <div class="title">Carat</div>
-          <div class="description">
-              <input type="text" id="carat" name="carat" placeholder="Enter Carat Value (float)">
-          </div>
-        </div>
-
-
-
-
-
-      <div class="section">
-        <div class="title">Cut</div>
-        <div class="description">
-          <select id="cut" name="cut">
-            <option value="Fair">Fair</option>
-            <option value="Good">Good</option>
-            <option value="Very Good">Very Good</option>
-            <option value="Premium">Premium</option>
-            <option value="Ideal">Ideal</option>
+        <div class="mb-3">
+          <label class="form-label">Gender</label>
+          <select class="form-control" name="gender" placeholder="Enter you Gender" required>
+              <option class="placeholder" selected disabled value="">Select your Gender</option>
+              <option value="male">
+                  Male
+              </option>
+              <option value="female">
+                  Female
+              </option>
           </select>
-        </div>
       </div>
-
-
-
-
-      <div class="section">
-        <div class="title">Color</div>
-        <div class="description">
-          <select id="color" name="color">
-            <option value="D">D</option>
-            <option value="E">E</option>
-            <option value="F">F</option>
-            <option value="G">G</option>
-            <option value="H">H</option>
-            <option value="I">I</option>
-            <option value="J">J</option>
+      <div class="mb-3">
+          <label class="form-label">Race or Ethnicity</label>
+          <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
+              <option class="placeholder" selected disabled value="">Select Ethnicity</option>
+              <option value="group A">
+                  Group A
+              </option>
+              <option value="group B">
+                  Group B
+              </option>
+              <option value="group C">
+                  Group C
+              </option>
+              <option value="group D">
+                  Group D
+              </option>
+              <option value="group E">
+                  Group E
+              </option>
           </select>
-        </div>
       </div>
-
-
-
-      <div class="section">
-        <div class="title">Clarity</div>
-        <div class="description">
-          <select id="clarity" name="clarity">
-            <option value="I1">I1</option>
-            <option value="SI2">SI2</option>
-            <option value="SI1">SI1</option>
-            <option value="VS2">VS2</option>
-            <option value="VS1">VS1</option>
-            <option value="VVS2">VVS2</option>
-            <option value="VVS1">VVS1</option>
-            <option value="IF">IF</option>
+      <div class="mb-3">
+          <label class="form-label">Parental Level of Education</label>
+          <select class="form-control" name="parental_level_of_education"
+              placeholder="Enter you Parent Education" required>
+              <option class="placeholder" selected disabled value="">Select Parent Education</option>
+              <option value="associate's degree">
+                  associate's degree
+              </option>
+              <option value="bachelor's degree">
+                  bachelor's degree
+              </option>
+              <option value="high school">
+                  high school
+              </option>
+              <option value="master's degree">
+                  master's degree
+              </option>
+              <option value="some college">
+                  some college
+              </option>
+              <option value="some high school">
+                  some high school
+              </option>
           </select>
-        </div>
       </div>
-
-
-
-        
-
-      <div class="section">
-        <div class="title">Depth</div>
-        <div class="description">
-            <input type="text" id="depth" name="depth" placeholder="Enter depth value (float)">
-        </div>
+      <div class="mb-3">
+          <label class="form-label">Lunch Type</label>
+          <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
+              <option class="placeholder" selected disabled value="">Select Lunch Type</option>
+              <option value="free/reduced">
+                  free/reduced
+              </option>
+              <option value="standard">
+                  standard
+              </option>
+          </select>
       </div>
-
-
-
-      <div class="section">
-        <div class="title">Table</div>
-        <div class="description">
-            <input type="text" id="table" name="table" placeholder="Enter table value (float)">
-        </div>
+      <div class="mb-3">
+          <label class="form-label">Test preparation Course</label>
+          <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
+              required>
+              <option class="placeholder" selected disabled value="">Select Test_course</option>
+              <option value="none">
+                  None
+              </option>
+              <option value="completed">
+                  Completed
+              </option>
+          </select>
       </div>
-
-      
-
-
-
-    
-      <div class="section">
-        <div class="title">x</div>
-        <div class="description">
-            <input type="text" id="x" name="x" placeholder="Enter x value (float)">
-        </div>
+      <div class="mb-3">
+          <label class="form-label">Writing Score out of 100</label>
+          <input class="form-control" type="number" name="reading_score"
+              placeholder="Enter your Reading score" min='0' max='100' />
       </div>
-      
+      <div class="mb-3">
+          <label class="form-label">Reading Score out of 100</label>
+          <input class="form-control" type="number" name="writing_score"
+              placeholder="Enter your Reading Score" min='0' max='100' />
 
-      <div class="section">
-        <div class="title">y</div>
-        <div class="description">
-            <input type="text" id="y" name="y" placeholder="Enter y value (float)">
-        </div>
       </div>
-      
-
-      <div class="section">
-        <div class="title">z</div>
-        <div class="description">
-            <input type="text" id="z" name="z" placeholder="Enter z value (float)">
-        </div>
-      </div>
-      
-
-
-
-
-
-
-
-
+             
 
           <div style="width:100%; float: left; text-align: center;">
  
@@ -177,7 +155,7 @@
          
             </div>
             
-            <h1><h1>Diamond Price is  {{final_result}} </h1></h1>
+            <h1><h1>Maths Score is  {{final_result}} </h1></h1>
               
               
           </form>
