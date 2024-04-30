@@ -22,6 +22,29 @@ def home_page():
     return render_template('index.html')
 
 
-
+@app.route("/predict",mehods=['GET','POST'])
+def predict_datapoint():
+    if request.method == 'GET':
+        return render_template('form.html')
+    
+    else:
+        data = CustomData(
+            gender = str(request.form.get('gender')),
+            race_ethnicity = str(request.form.get('race_ethnicity')),
+            parental_level_of_education = str(request.form.get('parental_level_of_education')),
+            lunch = str(request.form.get('lunch')),
+            test_preparation_course = str(request.form.get('test_preparation_course')),
+            reading_score = int(request.form.get('reading_score')),
+            writing_score = int(request.form.get('writing_score'))   
+        )
+        
+        final_new_data = data.get_data_as_data_frame()
+        
+        predict_pipeline = PredictionPipeline()
+        
+        pred = predict_pipeline.predict(final_new_data)
+        
+        return render_template('form.html',final_result = pred)
+    
 if __name__ == '__main__':
     app.run(debug=True)
