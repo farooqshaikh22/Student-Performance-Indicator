@@ -25,30 +25,30 @@ class batch_prediction:
         self.model_file_path = model_file_path
         self.transformation_file_path = transformation_file_path
         
-        def start_batch_prediction(self):
-            try:
-                ##load data transformation path               
-                with open(self.transformation_file_path,'rb') as f:
-                    preprocessor = pickle.load(f)
-                    
-                ## load the model
-                model = load_object(filepath=self.model_file_path)
+    def start_batch_prediction(self):
+        try:
+            ##load data transformation path               
+            with open(self.transformation_file_path,'rb') as f:
+                preprocessor = pickle.load(f)
                 
-                df = pd.read_csv(self.input_file_path)
-                
-                transformed_data = preprocessor.transform(df)
-                
-                predictions = model.predict(transformed_data)
-                
-                df_prediction = pd.DataFrame(predictions,columns=['predictions'])
-                
-                os.makedirs(BATCH_PREDICTION,exist_ok=True)
-                df_prediction.to_csv(BATCH_PREDICTION,index=False)
-                
-                logging.info("Batch Prediction Done")
+            ## load the model
+            model = load_object(filepath=self.model_file_path)
+            
+            df = pd.read_csv(self.input_file_path)
+            
+            transformed_data = preprocessor.transform(df)
+            
+            predictions = model.predict(transformed_data)
+            
+            df_prediction = pd.DataFrame(predictions,columns=['predictions'])
+            
+            os.makedirs(BATCH_PREDICTION,exist_ok=True)
+            df_prediction.to_csv(BATCH_PREDICTION,index=False)
+            
+            logging.info("Batch Prediction Done")
                                
                 
-            except Exception as e:
-                logging.info("Error Occured During Batch Prediction")
-                raise CustomException(e,sys)
+        except Exception as e:
+            logging.info("Error Occured During Batch Prediction")
+            raise CustomException(e,sys)
 
