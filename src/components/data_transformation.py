@@ -45,14 +45,14 @@ class DataTransformation:
             
             ## Numerical Pipeline            
             num_pipeline = Pipeline(steps=[
-                ("imputer",SimpleImputer(strategy='median')),
+                ("imputer",SimpleImputer(strategy='median')),   
                 ("scaler",StandardScaler(with_mean=False))
             ])
             
             ## Categorical Pipeline
             cat_pipeline = Pipeline(steps=[
                 ("imputer",SimpleImputer(strategy="most_frequent")),
-                ("ohe",OneHotEncoder()),
+                ("ohe",OneHotEncoder(handle_unknown='ignore')),
                 ("scaler",StandardScaler(with_mean=False))
             ])
             
